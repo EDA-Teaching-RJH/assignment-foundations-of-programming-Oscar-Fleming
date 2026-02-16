@@ -94,3 +94,5 @@ def run_system_monolith():
         break 
             
     print("End of cycle.")
+#mistake 5 - only defines function doesnt use it
+run_system_monolith()
