@@ -2,8 +2,7 @@ n = ["Picard", "Riker", "Data", "Worf"]
 r = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
 d = ["Command", "Command", "Operations", "Security"]
 
-active = True
-
+#mistake 8: active variable is unused - remove
 def run_system_monolith():
     print("BOOTING SYSTEM...")
     print("...")
