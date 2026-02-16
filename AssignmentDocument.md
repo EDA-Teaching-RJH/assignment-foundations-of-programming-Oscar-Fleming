@@ -89,12 +89,13 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-           
+            
             idx = n.index(rem)
             n.pop(idx)
             r.pop(idx)
             d.pop(idx)
             print("Removed.")
+            
             
         elif opt == "4":
             print("Analyzing...")
@@ -119,21 +120,21 @@ def run_system_monolith():
         else:
             print("System Failure")
             
-       
-        if len(n) > 0:
-            print("Database has entries.")
-        if len(n) == 0:
-            print("Database empty.")
+#mistake 3: unnessercery indentation       
+    if len(n) > 0:
+        print("Database has entries.")
+    if len(n) == 0:
+        print("Database empty.")
 
         
-        fuel = 100
-        consumption = 0
-        while fuel > 0:
+    fuel = 100
+    consumption = 0
+    while fuel > 0:
+        
+        print("Idling...")
+        break 
             
-            print("Idling...")
-            break 
-            
-        print("End of cycle.")
+    print("End of cycle.")
 
 run_system_monolith
 ```
