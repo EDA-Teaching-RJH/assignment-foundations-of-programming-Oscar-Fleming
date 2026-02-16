@@ -74,6 +74,7 @@ def run_system_monolith():
             for i in range(10):
                 print(n[i] + " - " + r[i]) 
                 
+                
         elif opt == "2":
             new_name = input("Name: ")
             new_rank = input("Rank: ")
@@ -81,6 +82,9 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            #mistake 2: doesnt add the rank or division
+            r.append(new_rank)
+            d.append(new_div)
             print("Crew member added.")
             
         elif opt == "3":
