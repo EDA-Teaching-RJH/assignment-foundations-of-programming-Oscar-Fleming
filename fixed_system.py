@@ -29,8 +29,8 @@ def run_system_monolith():
         #mistake 4: missing second = sign - trying to compare a string
         if opt == "1":  
             print("Current Crew List:")
-            
-            for i in range(10):
+            #mistake 5: range not customized to list size
+            for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
                 
                 
