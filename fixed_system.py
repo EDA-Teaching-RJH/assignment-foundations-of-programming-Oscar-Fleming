@@ -87,7 +87,7 @@ def run_system_monolith():
 
         
     fuel = 100
-    consumption = 0
+    #consumption does nothing and is an unnecessary variable - remove
     while fuel > 0:
         
         print("Idling...")
