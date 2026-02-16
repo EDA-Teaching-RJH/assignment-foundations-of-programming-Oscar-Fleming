@@ -1,7 +1,7 @@
 n = ["Picard", "Riker", "Data", "Worf"]
 r = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
 d = ["Command", "Command", "Operations", "Security"]
-
+#mistake 10 - no actual use to division?
 #mistake 8: active variable is unused - remove
 def run_system_monolith():
     print("BOOTING SYSTEM...")
