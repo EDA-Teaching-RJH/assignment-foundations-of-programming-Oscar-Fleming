@@ -24,12 +24,12 @@ def main():
         if repeat == "n":
             print ("System shutting down")
             break
-        return
+    return
 
 def init_database():
-    n = ["Spock", "Sisko", "Quark", "Kirk", "Maxwell"]
-    r = ["Commander", "Captain", "Civillian", "Rear Admiral", "Vice Admiral" ]
-    d = ["Science" "Command", "None", "Command", "Command"]
+    n = ["Spock ", "Sisko ", "Quark ", "Kirk ", "Maxwell "]
+    r = ["Commander ", "Captain ", "Civillian ", "Rear Admiral ", "Vice Admiral " ]
+    d = ["Science ", "Command ", "None ", "Command ", "Command "]
     i = ["001", "002", "003", "004", "005"]
     return n, r, d, i
 
@@ -105,7 +105,8 @@ def update_rank(names, ranks, ids):
     return names, ranks, ids
 
 def display_roster(names, ranks, divs, ids):
-    
+    for i in range(len(names)):
+        print(names[i], ranks[i], divs[i], ids[i])
     return
 
 def search_crew(names, ranks, divs, ids):
