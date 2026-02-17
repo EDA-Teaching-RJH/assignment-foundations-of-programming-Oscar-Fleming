@@ -7,9 +7,9 @@ def main():
         if choice == 1:
             n,r,d,i = add_member(n,r,d,i)
         elif choice == 2:
-            remove_member(n,r,d,i)
+            n,r,d,i = remove_member(n,r,d,i)
         elif choice == 3:
-            update_rank(n,r,d,i)
+            update_rank(n,r,i)
         elif choice == 4:
             display_roster(n,r,d,i)
         elif choice == 5:
@@ -83,18 +83,33 @@ def add_member(names, ranks, divs, ids):
 def remove_member(names, ranks, division, ids):
     id_remover = input("Please input the Id of the member you wish to remove ")
     x = ids.index(id_remover) 
+    names.pop(x)
+    ranks.pop(x)
+    division.pop(x)
+    ids.pop(x)
+    return names, ranks, division, ids
 
-    return
 def update_rank(names, ranks, ids):
+    rank_valid = False
+    id = input("Please input a members ID to update their rank ")
+    y = ids.index(id)
+    while True:
+        
     return
+
 def display_roster(names, ranks, divs, ids):
     return
+
 def search_crew(names, ranks, divs, ids):
     return
+
 def filter_by_division(names, divs):
     return
+
 def calculate_payroll(ranks):
     return
+
 def count_officers(ranks):
     return
+
 main()
