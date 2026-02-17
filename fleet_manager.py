@@ -1,23 +1,30 @@
+
 def main():
-    init_database()
-    display_menu()
-    if choice == 1:
+    n, r, d, i = init_database()
+    while True:
 
-    elif choice == 2:
-
-    elif choice == 3:
-        
-    elif choice == 4:
-        
-    elif choice == 5:
-        
-    elif choice == 6:
-        
-    elif choice == 7:
-        
-    elif choice == 8:
-        
-    return
+        choice = display_menu()
+        if choice == 1:
+            n,r,d,i = add_member(n,r,d,i)
+        elif choice == 2:
+            remove_member(n,r,d,i)
+        elif choice == 3:
+            update_rank(n,r,d,i)
+        elif choice == 4:
+            display_roster(n,r,d,i)
+        elif choice == 5:
+            search_crew(n,r,d,i)
+        elif choice == 6:
+            filter_by_division(n,d)
+        elif choice == 7:
+            calculate_payroll(r)
+        elif choice == 8:
+            count_officers(r)
+        repeat = input("Back to menu? (y/n) ")
+        if repeat == "n":
+            print ("System shutting down")
+            break
+        return
 
 def init_database():
     n = ["Spock", "Sisko", "Quark", "Kirk", "Maxwell"]
@@ -39,16 +46,44 @@ def display_menu():
 7. Calculate Payroll
 8. Count Officers
 User - """ + user_name)
-        choice = int(input(""))
-        if choice > 0 and choice < 9:
+        user_choice = int(input(""))
+        if user_choice > 0 and user_choice < 9:
             break
-        print( "choose a valid option")
-    return choice
+        print("choose a valid option ")
+    return user_choice
 
 def add_member(names, ranks, divs, ids):
+    id_check = False
+    rank_check = False
+    new_name = input("What is new member's name ")
+    new_div = input("please input the new member's division ")
+    while True:
+        new_id = input("please input the new member's ID ")
+        for q in range(len(ids)):
+            if new_id == ids[q]:
+                print("Please pick a unique ID ")
+                id_check = True
+        if id_check == False:
+            break
+    while True:
+        new_rank = input("Please input the New member's rank (Case sensitive)")
+        if new_rank == "Cadet" or new_rank == "Ensign" or new_rank == "Lieutenant" or new_rank == "Commander" or new_rank == "Captain" or new_rank == "Rear Admiral" or new_rank == "Vice Admiral" or new_rank == "Admiral" or new_rank == "Fleet Admiral":
+            rank_check = True
+        else: 
+            print("invalid rank")
+        if rank_check == True:
+            break
+        names.append(new_name)
+        ranks.append(new_rank)
+        divs.append(new_div)
+        ids.append(new_id)
+    return new_name, new_rank, new_div, new_id
 
-    return
-def remove_member(names, ranks, divs, ids):
+
+def remove_member(names, ranks, division, ids):
+    id_remover = input("Please input the Id of the member you wish to remove ")
+    x = ids.index(id_remover) 
+
     return
 def update_rank(names, ranks, ids):
     return
