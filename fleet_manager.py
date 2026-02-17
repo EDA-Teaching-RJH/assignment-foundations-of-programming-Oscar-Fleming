@@ -9,7 +9,7 @@ def main():
         elif choice == 2:
             n,r,d,i = remove_member(n,r,d,i)
         elif choice == 3:
-            update_rank(n,r,i)
+            n, r, i = update_rank(n,r,i)
         elif choice == 4:
             display_roster(n,r,d,i)
         elif choice == 5:
@@ -94,10 +94,18 @@ def update_rank(names, ranks, ids):
     id = input("Please input a members ID to update their rank ")
     y = ids.index(id)
     while True:
-        
-    return
+        new_rank = input("Please input the member's updated rank")
+        if new_rank == "Cadet" or new_rank == "Ensign" or new_rank == "Lieutenant" or new_rank == "Commander" or new_rank == "Captain" or new_rank == "Rear Admiral" or new_rank == "Vice Admiral" or new_rank == "Admiral" or new_rank == "Fleet Admiral":
+            rank_valid == True
+        if rank_valid == True:
+            break
+        else:
+            print ("invalid rank, please re-input")
+    ranks[y] = new_rank
+    return names, ranks, ids
 
 def display_roster(names, ranks, divs, ids):
+    
     return
 
 def search_crew(names, ranks, divs, ids):
