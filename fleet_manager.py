@@ -29,7 +29,7 @@ def main():
 def init_database():
     n = ["Spock ", "Sisko ", "Quark ", "Kirk ", "Maxwell "]
     r = ["Commander ", "Captain ", "Civillian ", "Rear Admiral ", "Vice Admiral " ]
-    d = ["Science ", "Command ", "None ", "Command ", "Command "]
+    d = ["Science", "Command", "None", "Command", "Command"]
     i = ["001", "002", "003", "004", "005"]
     return n, r, d, i
 
@@ -110,9 +110,18 @@ def display_roster(names, ranks, divs, ids):
     return
 
 def search_crew(names, ranks, divs, ids):
+    search_term = input("Please give a search term ")
+    for i in range(len(names)):
+        
+        y  = names.index(search_term,i)
+        print (y)
     return
 
 def filter_by_division(names, divs):
+    division = input("Please input a division to search for ")
+    for i in range (len(names)):
+        if divs[i] == division:
+            print(names[i])
     return
 
 def calculate_payroll(ranks):
